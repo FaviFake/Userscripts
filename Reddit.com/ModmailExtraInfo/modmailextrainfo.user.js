@@ -27,40 +27,34 @@ class __settings__ {
     - content | This text will be added to the messagebox once selected (Example value: "Hello world!")*/
     responses = [
         {
-            "name":"Default Approved",
-            "replace":true,
+            "name":"{Thanks for contacting us!",
+            "replace":false,
             "subreddit":"",
-            "content":`Hey, approved the post!`
+            "content":`Hey, thanks for contacting us! `
         },
         {
-            "name":"Default Rule Broken",
+            "name":"Post Approved",
             "replace":true,
             "subreddit":"",
-            "content":`Your post broke our [rules](${this.rules}).\n\nThe action will not be reverted.`
+            "content":`Hey, thanks for contacting us! Your post has been approved :)\n\nHave a good day!`
+        },
+        {
+            "name":"Have a good day",
+            "replace":false,
+            "subreddit":"",
+            "content":` Have a good day!`
+        },
+        {
+            "name":"Rules Broken",
+            "replace":true,
+            "subreddit":"",
+            "content":`Your post has been removed because it broke our [rules](${this.rules}).`
         },
         {
             "name":"Add Rule Description",
             "replace":false,
             "subreddit":"",
             "content":`<open-rulelist-dialog>`
-        },
-        {
-            "name":"Add Greetings",
-            "replace":false,
-            "subreddit":"",
-            "content":`${randItem(["Greetings","Hello","Hi"])} ${this.userTag},\n\n`
-        },
-        {
-            "name":"Add Subreddit Mention",
-            "replace":false,
-            "subreddit":"",
-            "content":`${this.subTag}`
-        },
-        {
-            "name":"Add User Mention",
-            "replace":false,
-            "subreddit":"",
-            "content":`${this.userTag}`
         },
         {
             "name":"Add Modmail Link",
@@ -87,28 +81,16 @@ class __settings__ {
             "content":`[Content Policy](https://www.redditinc.com/policies/content-policy)`
         },
         {
-            "name":"Add User Agreement",
-            "replace":false,
-            "subreddit":"",
-            "content":`[User Agreement](https://www.redditinc.com/policies/user-agreement)`
-        },
-            {
             "name":"Add Reddiquette",
             "replace":false,
             "subreddit":"",
             "content":`[Reddiquette](https://reddit.zendesk.com/hc/en-us/articles/205926439-Reddiquette)`
         },
-            {
+        {
             "name":"Add Admin Modmail",
             "replace":false,
             "subreddit":"",
             "content":`[Admins](https://www.reddit.com/message/compose?to=%2Fr%2Freddit.com)`
-        },
-        {
-            "name":"Add Rickroll",
-            "replace":false,
-            "subreddit":"",
-            "content":`[link](https://www.youtube.com/watch?v=dQw4w9WgXcQ)`
         },
         {
             "name":"Invitation (New Message)",
